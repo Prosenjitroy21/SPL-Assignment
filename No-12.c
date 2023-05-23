@@ -1,20 +1,28 @@
 #include<stdio.h>
 #include<math.h>
+void integartobinary(int a){
+    printf("Converted to binary number:");
+int i=0,b,arr[32];
+while(a!=0){
+
+    b=a%2;
+    a=a/2;
+arr[i]=b;
+i++;
+}
+int j=i-1;
+while(j>=0){
+    printf("%d",arr[j]);
+    j--;
+}
+}
 int main(){
-    int n1=0,n2=1,i,sum=0,n;
-    printf("Enter the nth number:");
-    scanf("%d",&n);
-    printf("The fibonacci series is %d %d",n1,n2);
-    for(i=0;i<n-2;i++){
-        sum=n1+n2;
-        n1=n2;
-        n2=sum;
-        printf("%3d",sum);
-    }
-
-
-//input:8
-//output:The fibonacci series is 0 1 1 2 3 5 8 13
+   int n;
+   printf("Enter any integar number:");
+   scanf("%d",&n);
+   integartobinary(n);
 
 return 0;
 }
+//input:46
+//output:Converted to binary number:0101110
